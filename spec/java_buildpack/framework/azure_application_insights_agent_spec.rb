@@ -46,7 +46,7 @@ describe JavaBuildpack::Framework::AzureApplicationInsightsAgent do
 
       component.compile
 
-      expect(sandbox + "azure_application_insights_agent-#{version}.jar").to exist
+      expect(sandbox + "applicationinsights-agent-#{version}.jar").to exist
     end
 
     it 'copies resources',
@@ -64,7 +64,7 @@ describe JavaBuildpack::Framework::AzureApplicationInsightsAgent do
       component.release
 
       expect(java_opts).to include('-javaagent:$PWD/.java-buildpack/azure_application_insights_agent/' \
-                                   "azure_application_insights_agent-#{version}.jar")
+                                   "applicationinsights-agent-#{version}.jar")
       expect(java_opts).to include('-DAPPLICATION_INSIGHTS_IKEY=test-instrumentation-key')
     end
 

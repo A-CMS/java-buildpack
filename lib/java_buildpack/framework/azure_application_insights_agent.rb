@@ -40,6 +40,11 @@ module JavaBuildpack
           .add_system_property('APPLICATION_INSIGHTS_IKEY', credentials[INSTRUMENTATION_KEY])
       end
 
+      # (see JavaBuildpack::Component::VersionedDependencyComponent#jar_name)
+      def jar_name
+        "applicationinsights-agent-#{@version}.jar"
+      end
+
       protected
 
       # (see JavaBuildpack::Component::VersionedDependencyComponent#supports?)
