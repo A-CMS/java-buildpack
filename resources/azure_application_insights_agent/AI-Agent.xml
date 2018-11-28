@@ -21,6 +21,7 @@
         <BuiltIn enabled="true">
             <Jedis enabled="true" thresholdInMS="1000"/>
             <MaxStatementQueryLimitInMS>1000</MaxStatementQueryLimitInMS>
+            <Jdbc enabled="true"/>
         </BuiltIn>
     </Instrumentation>
 </ApplicationInsightsAgent>
